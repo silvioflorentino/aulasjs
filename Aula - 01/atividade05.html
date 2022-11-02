@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 05</title>
+</head>
+<body>
+    <h1>Calcular a área quadrada</h1>
+    <button onclick="areaQuadrada()">Calcular</button>
+    <div id="rsp"> </div>
+
+    <script>
+        function areaQuadrada(){
+            let resposta = confirm("Você tem a certeza que deseja calcular a metragem quadrada?");
+
+            if(resposta == true){
+                let lado1 = prompt("Digite a largura do terreno em metros");
+                let lado2 = prompt("Digite a comprimento do terreno em metros");
+
+                let total = Number(lado1) * Number(lado2);
+
+                document.getElementById("rsp").innerHTML = ("A área total é de " + total + " metros quadrados.")
+                
+            }else{
+                let msg = "Tudo bem...faça depois";
+            document.getElementById("rsp").innerHTML = msg;
+            }
+        }
+    </script>
+</body>
+</html>
